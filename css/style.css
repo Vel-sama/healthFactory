@@ -31,7 +31,8 @@ a, li {
     font-size: 1rem;
 }
 a:hover {
-    color: orange;
+    color:#0B8FA3;
+    /* font-size: 1.1rem; */
 }
 h1 {
   margin: 3rem 0;
@@ -112,16 +113,18 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #126a78;
+    background-color: white;
     padding: 1rem;
     position: relative;
     margin: 0 auto;
+    color: #126a78;
   }
   
-  .logo {
+  .nav-brand {
+    
     font-size: 1.5rem;
     font-weight: 700;
-    color: #126a78;
+    color: #0B8FA3;
     text-transform: uppercase;
     text-decoration: none;
   }
@@ -152,7 +155,7 @@ h1 {
   }
   
   .navbar .links li a:hover {
-    color: #e2d30a;
+    color: #0B8FA3;;
   }
   .toggle__btn {
     color: black;
@@ -538,6 +541,19 @@ span {
     margin-bottom: 20px;
   }
 }
+/* PRICE */
+.price__wrapper {
+  max-width: 1200px;
+}
+.price__wrapper-one {
+
+}
+.price__inner-wrapper {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+/* PRICE ENDED */
 .map__container {
     width: 100%;
     height: 75vh;
