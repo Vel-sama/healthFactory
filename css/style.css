@@ -164,12 +164,11 @@ h1 {
     display: none;
   }
 .action__btn {
-  background-color: orangered;
+  background-color: #0B8FA3 ;
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
-  border-radius: 20px;
   font-size: 0.8rem;
   font-weight: bold;
   cursor: pointer;
@@ -205,6 +204,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: blac;
+
+}
+.dropdown__menu li:hover { 
+  background-color: #0B8FA3;
+  opacity: 0.6;
+  color: black;
 }
 .dropdown__menu .action__btn {
   display: flex;
@@ -339,9 +345,12 @@ h1 {
 }
 /* ABOUT_US ENDED */
 /* WHAT WE PROVIDE STARTED */
-.what__we-provide {
+
+/* .what__we-provide {
   background: whitesmoke;
   max-width: 100%;
+  display: flex;
+  justify-content: space-between;
   column-count: 2;
   column-gap: 2rem;
   column-fill: balance;
@@ -349,23 +358,58 @@ h1 {
   line-height: 1.8;
   font-size: 18px;
   padding: 1rem 2rem;
-  max-width: 100%;
+  color: #0B434C;
 }
-.what__we-provide {
-  margin: 0 auto;
-  max-width: 100%;
+.what__we-provide__wrapper {
+  padding: 1rem 2rem;
+  text-align: justify;
 }
 .what__we-provide__text {
   color: #0B434C;
-  text-align: justify;
   line-height: 1.8;
   font-size: 18px;
-  padding: 1rem 2rem;
+
 }
 .what__we-provide__text-list li {
   list-style: disc;
   font-size: 24px;
+  padding-left: 1rem;
 }
+.what__we-provide__text-list li::before { 
+  padding-left: 2rem;
+} */
+.what__we-provide__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.what__we-provide__left {
+  flex-basis: 50%;
+  padding: 20px;
+  margin-right: 1rem;
+}
+.what__we-provide__right {
+  flex-basis: 50%;
+  padding: 20px;
+}
+.what__we-provide__wrapper li {
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+.what__we-provide__wrapper p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 200;
+  padding-bottom: 0.8rem;
+}
+.what__we-provide__left li, .what__we-provide__right li {
+  list-style-type: disc;
+}
+
 /* WHAT WE PROVIDE ENDED */
 
 @media (max-width:992px) {
@@ -542,17 +586,82 @@ span {
   }
 }
 /* PRICE */
-.price__wrapper {
-  max-width: 1200px;
-}
-.price__wrapper-one {
-
-}
-.price__inner-wrapper {
-  width: 35%;
+.price {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto;
+}
+.white-section  h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  font-weight: 800;
+}
+.price__ul li {
+  line-height: 1.5rem;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
+.price__ul-li span {
+  font-size: 1rem;
+  color: rgba(66, 65, 65, 0.95);
+}
+.price__ul {
+  font-size: 0.8rem;
+}
+.price__ul-p {
+  padding-bottom: 1rem;
+}
+.white-section {
+  flex-basis: 40%;
+  padding: 20px;
+  margin-right: 2rem;
+}
+.grey-section {
+  background-color: lightgrey;
+  flex-basis: 40%;
+  padding: 20px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.grey-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #0B8FA3;
+}
+
+.grey-section  p {
+  font-size: 0.8rem;
+}
+.price__ul .price__ul-li {
+  color:#0B8FA3;
+  font-size: 1.5rem;
+}
+.grey-section {
+  box-shadow: 5px 5px 5px grey;
+}
+.price__ul-second {
+  margin-top: 3rem;
+}
+
+.price__ul-second li {
+  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.price__ul-second .price__ul-li {
+  color:#0B8FA3;
+  font-size: 1.25rem;
+}
+
+
+
 /* PRICE ENDED */
 .map__container {
     width: 100%;
@@ -567,17 +676,15 @@ span {
     margin-top: 45px;
     font-weight: 100;
     color: black;
-    font-size: 24px;
-    text-align: left;
+    text-align: center;
+    font-size: 18px;
 }
 .map__container .map__text {
-    text-align: left;
     margin-top: 15px;
-
-    font-weight: 100;
-    color: black;
-    font-size: 24px;
+    text-align: center;
+    font-size: 18px;
 }
+
 /* For screens up to 768px */
 @media only screen and (max-width: 768px) {
   .map__container {
@@ -605,12 +712,12 @@ span {
   }
 
   .map__container p {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 40px;
   }
 
   .map__container .map__text {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
   }
 }
@@ -622,12 +729,12 @@ span {
   }
 
   .map__container p {
-    font-size: 24px;
+    font-size: 18px;
     margin-top: 45px;
   }
 
   .map__container .map__text {
-    font-size: 24px;
+    font-size: 18px;
     margin-top: 15px;
   }
 }
@@ -661,7 +768,7 @@ span {
     text-decoration: none;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    font-weight: 500;
+    /* font-weight: 500; */
     margin-bottom: 0.5rem;
 }
 
