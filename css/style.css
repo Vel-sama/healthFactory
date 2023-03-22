@@ -18,6 +18,7 @@ html, body {
     min-height: 100vh;
     font-family: 'Montserrat';
     color: black;
+    margin: 0 auto;
 }
 
 .wrapper {
@@ -378,6 +379,10 @@ h1 {
 .what__we-provide__text-list li::before { 
   padding-left: 2rem;
 } */
+.what__we-provide {
+  background-color: #036280;
+  color: white;
+}
 .what__we-provide__wrapper {
   display: flex;
   flex-direction: row;
@@ -431,7 +436,7 @@ h1 {
   width: 100%;
   overflow: hidden;
   height: 4rem;
-  background-color: #D9D9D9;
+  background-color: white;
   padding-left: 100%;
   box-sizing: content-box;
 }
@@ -453,7 +458,7 @@ h1 {
   display: inline-block;
   padding: 0 2rem;
   font-size: 2rem;
-  color: #0B434C;
+  background-color: white;
 }
 
 
@@ -522,12 +527,15 @@ h1 {
       font-size: 18px;
     }
   }
-
+.specialists {
+  background-color:whitesmoke ;
+}
   .spec__container {
     max-width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 4rem;
+    background-color: whitesmoke;
 }
 
 .spec__container-info {
@@ -599,6 +607,9 @@ span {
   padding-bottom: 1rem;
   font-weight: 800;
 }
+.white-section {
+  
+}
 .price__ul li {
   line-height: 1.5rem;
   display: flex;
@@ -665,7 +676,7 @@ ul {
 /* PRICE ENDED */
 .map__container {
     width: 100%;
-    height: 75vh;
+    max-height: 40rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -741,6 +752,9 @@ ul {
 
 
 /* FOOTER */
+.footer {
+  background-color: #036280;
+}
 .footer__container {
     display: flex;
     flex-wrap: wrap;
@@ -768,7 +782,6 @@ ul {
     text-decoration: none;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    /* font-weight: 500; */
     margin-bottom: 0.5rem;
 }
 
