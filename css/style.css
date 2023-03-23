@@ -296,12 +296,13 @@ h1 {
   }
 
   .main__video-slogan {
-      top: 50%;
+      /* top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 80%;
       font-size: 24px;
-      text-align: center;
+      text-align: center; */
+      display: none;
   }
 
   .main__video::after {
@@ -694,7 +695,22 @@ ul {
   font-size: 1.25rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .price__wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .white-section, .grey-section {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+  
+  .white-section {
+    margin-bottom: 2rem;
+  }
+}
+/* @media screen and (max-width: 768px) {
   .price__wrapper {
   flex-direction: column;
   width: 90%;
@@ -715,7 +731,7 @@ ul {
   font-size: 1rem;
   text-align: center;
   }
-  }
+  } */
 
 
 /* PRICE ENDED */
