@@ -218,6 +218,7 @@ h1 {
   width: 100%;
   justify-content: center;
 }
+
 /* RESPONSIVE */
   @media (max-width:992px){
     .navbar .links,
@@ -234,6 +235,7 @@ h1 {
     }
   }
 
+/*Main video started*/
 
 .main__video {
     display: flex;
@@ -273,11 +275,52 @@ h1 {
     height: 100%;
     opacity: 0.9;
 }
-@media (max-width:992px){ 
+/*Main video endeed*/
+/* @media (max-width:992px){ 
   .main__video-slogan {
     display: none;
   }
+} */
+@media only screen and (max-width: 767px) {
+
+  .main__video {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: auto;
+  }
+
+  #myVideo {
+      width: 100%;
+      height: auto;
+  }
+
+  .main__video-slogan {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      font-size: 24px;
+      text-align: center;
+  }
+
+  .main__video::after {
+      display: none;
+  }
+
+  .content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+  }
+
+  #btn {
+      font-size: 18px;
+  }
 }
+
 /* Style the button used to pause/play the video */
 #btn {
     position: absolute;
@@ -345,24 +388,37 @@ h1 {
   padding-top: 1rem;
 }
 
-@media only screen and (max-width: 768px) {
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
   .about__us {
-  column-count: 1;
-  padding: 2rem;
+    padding: 2rem;
+    column-count: 1;
   }
   
   .about__us h2 {
-  font-size: 36px;
+    font-size: 32px;
+    margin: 1rem 0;
+  }
+  
+  .about__us h2::after {
+    width: 15%;
+    padding-top: 10px;
   }
   
   .about__us-text {
-  font-size: 16px;
+    font-size: 16px;
+    padding: 1rem;
+    text-align: left;
+    text-indent: 0;
+    line-height: 1.5;
   }
   
   .about__us-text__second-section {
-  padding-top: 0.5rem;
+    padding-top: 0.5rem;
   }
-  }
+}
+
+
 /* ABOUT_US ENDED */
 /* WHAT WE PROVIDE STARTED */
 
@@ -462,20 +518,7 @@ h1 {
 
 /* WHAT WE PROVIDE ENDED */
 
-@media (max-width:992px) {
-  .about__us-text {
-    column-count: 1;
-  }
-}
-@keyframes ticker {
-  0% {
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-  }
-}
+
 
 .ticker-wrap {
   width: 100%;
@@ -507,71 +550,7 @@ h1 {
 }
 
 
-/* For screens up to 768px wide */
-@media screen and (max-width: 768px) {
-    .about__us {
-      column-count: 1;
-      max-width: 90%;
-      margin: 0 auto;
-    }
-    .about__us h2 {
-      font-size: 32px;
-      margin-bottom: 36px;
-      margin-top: 16px;
-    }
-    .about__us h2::after {
-      width: 50%;
-    }
-    .about__us-text {
-      text-align: left;
-      text-indent: 25px;
-      font-size: 16px;
-    }
-  }
-  
-  /* For screens between 768px and 1024px wide */
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .about__us {
-      column-count: 2;
-      max-width: 80%;
-      margin: 0 auto;
-    }
-    .about__us h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
-      margin-top: 18px;
-    }
-    .about__us h2::after {
-      width: 35%;
-    }
-    .about__us-text {
-      text-align: justify;
-      text-indent: 40px;
-      font-size: 17px;
-    }
-  }
-  
-  /* For screens wider than 1024px */
-  @media screen and (min-width: 1024px) {
-    .about__us {
-      column-count: 2;
-      max-width: 100rem;
-      margin: 0 auto;
-    }
-    .about__us h2 {
-      font-size: 42px;
-      margin-bottom: 48px;
-      margin-top: 20px;
-    }
-    .about__us h2::after {
-      width: 25%;
-    }
-    .about__us-text {
-      text-align: justify;
-      text-indent: 50px;
-      font-size: 18px;
-    }
-  }
+
 .specialists {
   background-color:whitesmoke ;
 }
@@ -742,7 +721,7 @@ ul {
 /* PRICE ENDED */
 .map__container {
     width: 100%;
-    max-height: 60vh;
+    max-height: 0vh;
     display: flex;
     justify-content: center;
     align-items: center;
