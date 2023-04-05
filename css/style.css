@@ -30,6 +30,7 @@ a, li {
     text-decoration: none;
     list-style: none;
     font-size: 1rem;
+    /* color: white; */
 }
 a:hover {
     color:#0B8FA3;
@@ -142,6 +143,7 @@ h1 {
     margin-left: 1rem;
     font-size: 1.1rem;
     font-weight: 500;
+    color: white;
   }
   
   .navbar ul li:first-child {
@@ -545,7 +547,18 @@ h1 {
   background-color: white;
 }
 
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
 
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
 
 .specialists {
   background-color:whitesmoke ;
@@ -559,7 +572,7 @@ h1 {
 }
 
 .spec__container-info {
-    width: 350px;
+    width: 33%;
     position: relative;
     overflow: hidden;
     height: fit-content;
@@ -572,18 +585,18 @@ h1 {
     font-size: 20px;
 }
 .spec__container-info img {
-    width: 335px;
+    width: 100%;
 }
 
 .spec__container-info_more {
-    padding: 10px 10px 10px 10px;
+    padding: 10px 0;
     margin-bottom: 80px;
     position: absolute;
     background-color: #0B434C;
     opacity: .8;
     bottom: 0;
     left: 0;
-    width: 90%;
+    width: 100%;
     transform: translateY(160%);
     transition: 0.9s ease-in-out;
     color: #fff;
@@ -609,8 +622,8 @@ span {
   .spec__container-info_more {
     width: 100%;
     /* transform: translateY(0%); */
-    padding: 20px;
-    margin-bottom: 20px;
+    /* padding: 20px; */
+    margin-bottom: 5rem
   }
 }
 /* PRICE */
@@ -771,7 +784,7 @@ ul {
 }
 .carousel__item {
   height: 600px;
-  background-color: greenyellow;
+  background-color: gainsboro;
   padding: 1em;
   font-size: 2rem;
   display: none;
@@ -820,6 +833,7 @@ ul {
     width: 16rem;
     margin-left: auto;
     margin-right: auto;
+
 }
 .footer__info span {
     text-align: center;
@@ -829,7 +843,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--gray-900);
+    color: white;
     text-decoration: none;
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -839,7 +853,7 @@ ul {
 .footer__title svg {
     width: 1.25rem;
     height: 1.25rem;
-    color: var(--white);
+    color: white;
     padding: 0.5rem;
     background-color: var(--brand-500);
     border-radius: 50%;
@@ -848,7 +862,7 @@ ul {
     margin-left: 0.5rem;
 }
 .footer__tagline {
-    color: var(--gray-500);
+    color: white;
     font-size: 0.875rem;
     line-height: 1.25rem;
     margin-left: 2.5rem;
@@ -865,7 +879,7 @@ ul {
     line-height: 1.25rem;
 }
 .footer__category {
-    color: var(--gray-900);
+    color: white;
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -878,7 +892,7 @@ ul {
     list-style-type: none;
 }
 .footer__link {
-    color: var(--gray-500);
+  color: white;
 }
 .footer__link:hover {
     color: var(--gray-900);
