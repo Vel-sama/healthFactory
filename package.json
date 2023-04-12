@@ -1,0 +1,17 @@
+{
+  "name": "healthdesigned",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "swiper": "^9.2.0"
+  },
+  "devDependencies": {
+    "serve": "^11.2.0"
+  }
+}
