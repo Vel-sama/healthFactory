@@ -45,7 +45,7 @@ h1 {
     
 }
 .container {
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -112,10 +112,10 @@ h1 {
     width: 100%;
     max-width: 1500px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background-color: white;
-    padding: 1rem;
+    padding: 2rem 0;
     position: relative;
     margin: 0 auto;
     color: #126a78;
@@ -154,6 +154,7 @@ h1 {
     text-decoration: none;
     color: #333;
     transition: color 0.2s ease-in-out;
+    font-size: 1.5rem;
   }
   
   .navbar .links li a:hover {
@@ -171,7 +172,7 @@ h1 {
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: scale 0.2 easy;
@@ -182,8 +183,57 @@ h1 {
 }
 .action__btn:active {
   scale: 0.95;
-
 }
+
+
+.slide-effect {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.what__we-provide h1, .what__we-provide__left, .what__we-provide__right {
+  position: relative;
+  opacity:0;
+}
+
+.what__we-provide h1 {
+  top:40px;
+  animation: slideUp ease .8s forwards;
+}
+
+.what__we-provide__left {
+  top:-40px;
+  left:5px;
+  animation: slideDown ease .9s forwards .6s;
+}
+
+.what__we-provide__right {
+  top:40px;
+  left:10px;
+  animation: slideUp ease .9s forwards 1.2s;
+}
+
+
+@keyframes slideUp {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-40px);opacity:1;}
+}
+
+@keyframes slideDown {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(40px);opacity:1;}
+}
+
+@media only screen and (max-width: 600px) {
+  .slide-effect, .text, .slideDown, .slideUp {
+    font-size: 15px;
+  }
+}
+
 /* DROPDOWN MENU */
 .dropdown__menu {
   display: none;
@@ -429,7 +479,8 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
-  margin: 0 auto;
+  margin: 1rem auto;
+  /* padding: 1rem; */
 }
 
 .what__we-provide__left {
@@ -467,7 +518,7 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .what__we-provide__left {
   flex-basis: 50%;
@@ -569,6 +620,7 @@ h1 {
     justify-content: space-between;
     padding: 0 4rem;
     background-color: whitesmoke;
+    margin-bottom: 3rem;
 }
 
 .spec__container-info {
@@ -627,7 +679,7 @@ span {
   }
 }
 /* PRICE */
-.price__wrapper {
+/* .price__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -701,10 +753,10 @@ ul {
 .price__ul-second .price__ul-li {
   color:#0B8FA3;
   font-size: 1.25rem;
-}
+} */
 
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .price__wrapper {
   flex-direction: column;
   width: 90%;
@@ -715,7 +767,7 @@ ul {
   margin-bottom: 2rem;
   }
   .price__ul li, .price__ul-second li {
-  /* flex-direction: column; */
+  flex-direction: column;
   align-items: center;
   }
   .price__ul-p {
@@ -725,8 +777,22 @@ ul {
   font-size: 1rem;
   text-align: center;
   }
-  }
+  } */
 
+@media screen and (max-width:768px) {
+  .swiper_slide-1 {
+    content: url(../image/forYoung.jpg);
+  }
+  .swiper_slide-2  {
+    content: url(../image/forYoungPackage.jpg);
+  }
+  .swiper_slide-3  {
+    content: url(../image/forAdult.jpg);
+  }
+  .swiper_slide-4  {
+    content: url(../image/forAdultPackage.jpg);
+  }
+}
 
 /* PRICE ENDED */
 .map__container {
@@ -782,7 +848,7 @@ ul {
 .carousel {
   position: relative;
 }
-.carousel__item {
+/* .carousel__item {
   height: 600px;
   background-color: gainsboro;
   padding: 1em;
@@ -812,7 +878,7 @@ ul {
 
 .carousel__button--selected {
   background: rgba(255, 255, 255, 0.5);
-}
+} */
 
 
 /* FOOTER */
@@ -956,4 +1022,29 @@ ul {
         flex-direction: row;
         justify-content: space-between;
     }
+}
+
+
+
+swiper-container {
+  /* width: 90%; */
+  /* height: 900px; */
+  position: relative;
+
+}
+
+swiper-slide {
+  height: 600px;
+  text-align: center;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide > img {
+  display: block;
+  width: 80%;
+  /* height: 100px; */
+  object-fit: cover;
 }
