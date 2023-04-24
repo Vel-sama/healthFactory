@@ -21,30 +21,44 @@ function myFunction() {
   }
 }
 
+  // swiper parameters
+  const swiperParams = {
+    slidesPerView: 1,
+    breakpoints: {
+      640: {
+        slidesPerView: 4,
+      },
+      641: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 1,
+      },
+    },
+    on: {
+      init() {
+        // ...
+      },
+    },
+  };
 
-// document.querySelectorAll('.carousel').forEach( carousel => {
-//   const items = carousel.querySelectorAll('.carousel__item');
-//   const buttonsFromHtml = Array.from(items, () => {
-//     return `<span class="carousel__button"></span>`
-//   });
-//   carousel.insertAdjacentHTML("beforeend", `
-//   <div class="carousel__nav">
-//     ${buttonsFromHtml.join('')}
-//   </div>
-//   `);
-//   const buttons = carousel.querySelectorAll('.carousel__button');
-//   buttons.forEach((button, i)  => {
-//     button.addEventListener('click', () => {
-//       items.forEach(item => item.classList.remove('carousel__item--selected'));
-//       buttons.forEach(item => item.classList.remove('carousel__button--selected'));
+  // now we need to assign all parameters to Swiper element
+  Object.assign(swiperEl, swiperParams);
 
-//       items[i].classList.add('carousel__item--selected');
-//       buttons[i].classList.add('carousel__button--selected');
-//     })
-    
-//   })
-//   items[0].classList.add('carousel__item--selected');
-//   buttons[0].classList.add('carousel__button--selected');
-// })
+  // and now initialize it
+  swiperEl.initialize();
 
+  buttonEl.addEventListener('click', () => {
+    // if it was initialized with attributes
+    swiperEl.setAttribute('slides-per-view', '1');
 
+    // or if it was initialized with props
+    swiperEl.slidesPerView = 1;
+  });
+
+  window.onload = function() {
+    let video = document.getElementById('myVideo');
+    video.play();
+  };
+  
+  

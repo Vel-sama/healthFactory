@@ -109,13 +109,14 @@ h1 {
 
 /* Navigation Menu */
 .navbar {
+    /* height: 100%; */
     width: 100%;
     max-width: 1500px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: white;
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
     position: relative;
     margin: 0 auto;
     color: #126a78;
@@ -149,17 +150,65 @@ h1 {
   .navbar ul li:first-child {
     margin-left: 0;
   }
-  
+  .navbar ul li:nth-child(n+2) {
+    margin-left: 2rem;
+  }
   .navbar .links li a {
     text-decoration: none;
     color: #333;
     transition: color 0.2s ease-in-out;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   
   .navbar .links li a:hover {
-    color: #0B8FA3;;
+    color: #0B8FA3;
   }
+  .action__btn {
+    background: rgba(52, 172, 224, 1);
+    box-shadow: 0 0 0 0 rgba(52, 172, 224, 1);
+    /* animation: pulse-blue 2s infinite; */
+  }
+  .navbar .links li a:hover {
+    height: 100%;
+    color:  #0B8FA3;
+  }
+
+  .navbar .links li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.1rem;
+    margin-top: 0.5rem;
+    background: #0B8FA3;
+    transition: width .7s;
+}
+
+.navbar .links li:hover::after {
+    width: 100%;
+    transition: width .9s;
+}
+  @keyframes pulse-blue {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(52, 172, 224, 0.7);
+    }
+    
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(52, 172, 224, 0);
+    }
+    
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(52, 172, 224, 0);
+    }
+  }
+  
+
+
+
+
+
   .toggle__btn {
     color: black;
     font-size: 1.5rem;
@@ -167,9 +216,10 @@ h1 {
     display: none;
   }
 .action__btn {
+  height: 100%;
   background-color: #0B8FA3 ;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 2rem 3rem;
   border: none;
   outline: none;
   font-size: 1.1rem;
@@ -238,7 +288,7 @@ h1 {
 .dropdown__menu {
   display: none;
   position: absolute;
-  right: 2rem;
+  right: 1rem;
   height: 0;
   top: 60px;
   width: 300px;
@@ -249,14 +299,20 @@ h1 {
   transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .dropdown__menu.open {
-  height: 240px;
+  /* margin: 0 auto; */
+  width: 400px;
+  height: 300px;
+  /* display: flex; */
+  backdrop-filter: blur(0);
+  background-color: white;
+  padding-top: 1rem;
 }
 .dropdown__menu li {
   padding: 0.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: blac;
+  color: black;
 
 }
 .dropdown__menu li:hover { 
@@ -276,7 +332,9 @@ h1 {
     .navbar .action__btn {
       display: none;
     }
-
+    .dropdown__menu.open {
+      width: 750px;
+    }
     .navbar .toggle__btn {
       display: block;
     }
@@ -284,8 +342,18 @@ h1 {
       display: block;
       z-index: 1001;
     }
+    .main__video-slogan {
+      display: none;
+    }
+    .navbar {
+      padding: 1rem 0;
+    }
   }
-
+  @media (max-width:640px){
+    .dropdown__menu.open {
+      width: 28rem;
+    }
+  }
 /*Main video started*/
 
 .main__video {
@@ -639,6 +707,19 @@ h1 {
 .spec__container-info img {
     width: 100%;
 }
+.pulseLoader {
+  width: 40vh;
+  height: 40vh;
+  border-radius: 50%;
+  background-color: white;
+  outline: 1px solid transparent;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0); opacity: 0.8;}
+  100% { transform: scale(1); opacity: 0;}
+}
 
 .spec__container-info_more {
     padding: 10px 0;
@@ -779,18 +860,29 @@ ul {
   }
   } */
 
+  .mySwiper {
+    width: 100%;
+    height: fit-content;
+  }
 @media screen and (max-width:768px) {
+
   .swiper_slide-1 {
     content: url(../image/forYoung.jpg);
+    width: 100%;
+
   }
   .swiper_slide-2  {
     content: url(../image/forYoungPackage.jpg);
+    width: 60%;
+
   }
   .swiper_slide-3  {
-    content: url(../image/forAdult.jpg);
+    content: url(../image/packageForAdult.jpg);
+
   }
   .swiper_slide-4  {
-    content: url(../image/forAdultPackage.jpg);
+    content: url(../image/soloAdult.jpg);
+
   }
 }
 
@@ -1027,14 +1119,14 @@ ul {
 
 
 swiper-container {
-  /* width: 90%; */
-  /* height: 900px; */
+  width: 100%;
+  height: 700px;
   position: relative;
 
 }
 
 swiper-slide {
-  height: 600px;
+  height: 100%;
   text-align: center;
   background: #fff;
   display: flex;
@@ -1044,7 +1136,8 @@ swiper-slide {
 
 swiper-slide > img {
   display: block;
-  width: 80%;
+  width: 70%;
+  padding: 2rem 0;
   /* height: 100px; */
   object-fit: cover;
 }
