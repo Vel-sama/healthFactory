@@ -124,13 +124,16 @@ h1 {
   
   .nav-brand {
     
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    /* font-weight: 700;
     color: #0B8FA3;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: none; */
   }
-  
+  .nav-brand > img {
+    width: 10rem;
+    height: 4rem;
+  }
   .navbar ul {
     display: flex;
     justify-content: flex-end;
@@ -362,6 +365,16 @@ h1 {
     position: relative;
     width: 100%;
 }
+.main__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  width: 100%;
+}
 .main__video-slogan{
     position: absolute;
     top: 16rem;
@@ -393,6 +406,17 @@ h1 {
     width: 80%;
     height: 100%;
     opacity: 0.9;
+}
+#myVideo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 80%;
+  height: 100%;
+  opacity: 0.9;
 }
 /* Style the button used to pause/play the video */
 #btn {
@@ -733,6 +757,23 @@ h1 {
     transform: translateY(160%);
     transition: 0.9s ease-in-out;
     color: #fff;
+}
+.spec__container-info_more {
+  padding: 10px 0;
+  margin-bottom: 80px;
+  position: absolute;
+  background-color: #0B434C;
+  opacity: .8;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(160%);
+      -ms-transform: translateY(160%);
+          transform: translateY(160%);
+  -webkit-transition: 0.9s ease-in-out;
+  -o-transition: 0.9s ease-in-out;
+  transition: 0.9s ease-in-out;
+  color: #fff;
 }
 span {
     margin: 0 auto;
