@@ -447,10 +447,6 @@ h1 {
       position: relative;
       width: 100%;
       height: auto;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
   }
   
   .main__video-slogan {
