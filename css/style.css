@@ -303,8 +303,8 @@ h1 {
 }
 .dropdown__menu.open {
   /* margin: 0 auto; */
-  width: 400px;
-  height: 300px;
+  width: 4rem;
+  height: 3rem;
   /* display: flex; */
   backdrop-filter: blur(0);
   background-color: white;
@@ -336,7 +336,8 @@ h1 {
       display: none;
     }
     .dropdown__menu.open {
-      width: 750px;
+      width: 3rem;
+      padding-top: 1rem;
     }
     .navbar .toggle__btn {
       display: block;
@@ -446,6 +447,10 @@ h1 {
       position: relative;
       width: 100%;
       height: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
   }
   
   .main__video-slogan {
