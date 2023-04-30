@@ -304,12 +304,12 @@ h1 {
   }
   @media (max-width:640px){
     .dropdown__menu.open {
-      width: 28rem;
+      width: 22rem;
       margin-top: 1rem;
     }
     @media (min-width:640px){
       .dropdown__menu.open {
-        padding: 1rem 1rem;
+        padding: 1rem;
         width: 30rem;
       }
     }
