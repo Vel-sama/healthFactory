@@ -21,44 +21,35 @@ function myFunction() {
   }
 }
 
-  // swiper parameters
-  const swiperParams = {
-    slidesPerView: 1,
+
+window.onload = function () {
+  let video = document.getElementById('myVideo');
+  video.play();
+
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    paginationClickable: true,
+    spaceBetween: 20,
+    autoHeight: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
     breakpoints: {
-      640: {
-        slidesPerView: 4,
+      1920: {
+        slidesPerView: 2,
+        spaceBetween: 20
       },
-      641: {
+      1028: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      480: {
         slidesPerView: 1,
-      },
-      1024: {
-        slidesPerView: 1,
-      },
-    },
-    on: {
-      init() {
-        // ...
-      },
-    },
-  };
-
-  // now we need to assign all parameters to Swiper element
-  Object.assign(swiperEl, swiperParams);
-
-  // and now initialize it
-  swiperEl.initialize();
-
-  buttonEl.addEventListener('click', () => {
-    // if it was initialized with attributes
-    swiperEl.setAttribute('slides-per-view', '1');
-
-    // or if it was initialized with props
-    swiperEl.slidesPerView = 1;
+        spaceBetween: 10
+      }
+    }
   });
-
-  window.onload = function() {
-    let video = document.getElementById('myVideo');
-    video.play();
-  };
+};
   
   
