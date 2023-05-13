@@ -22,6 +22,32 @@
 
 <body>
     <div class="wrapper">
+        <div class="up__header">
+            <ul class="up__header-list">
+                <li>
+                    <div class="city__wrapper">
+                        <svg class="svg-icon" viewBox="0 0 20 20">
+                            <path d="M10,1.375c-3.17,0-5.75,2.548-5.75,5.682c0,6.685,5.259,11.276,5.483,11.469c0.152,0.132,0.382,0.132,0.534,0c0.224-0.193,5.481-4.784,5.483-11.469C15.75,3.923,13.171,1.375,10,1.375 M10,17.653c-1.064-1.024-4.929-5.127-4.929-10.596c0-2.68,2.212-4.861,4.929-4.861s4.929,2.181,4.929,4.861C14.927,12.518,11.063,16.627,10,17.653 M10,3.839c-1.815,0-3.286,1.47-3.286,3.286s1.47,3.286,3.286,3.286s3.286-1.47,3.286-3.286S11.815,3.839,10,3.839 M10,9.589c-1.359,0-2.464-1.105-2.464-2.464S8.641,4.661,10,4.661s2.464,1.105,2.464,2.464S11.359,9.589,10,9.589"></path>
+                        </svg>
+                        <select id="city" name="city">
+                            <option value="Vishneve">Вишневе</option>
+                            <option value="Kiyv">Київ</option>
+                        </select>
+                    </div>
+                </li>
+                    <li class="number__phone">
+                        <a href="tel:+38(097)2211022" id="phone-1">+38 (097) 2211022</a> 
+                        <a href="+38(073)2211022" id="phone-2">+38 (073) 2211022</a>
+                    </li>
+                </li>
+
+                <li class="city__adress" id="adress-1">
+                    вул. Машинобудівників 17– А
+                </li>
+            </ul>
+        </div>
+
+
         <header class="header">
             <nav class="navbar">
                 <div class="logo">
@@ -161,7 +187,8 @@
     </section>
 
     <section id="price">
-        <swiper-container class="mySwiper" pagination="true" pagination-type="progressbar" navigation="true" slides-per-view="1" speed="500" loop="true" css-mode="true">
+        
+        <swiper-container class="swiper" pagination="true" pagination-type="progressbar" navigation="true" slides-per-view="1" speed="500" loop="true" css-mode="true">
             <swiper-slide class="swiper_slide-1">
                 <img  class="swipper__img" src="./image/twoToYoung_compressed.jpg" alt="">
             </swiper-slide>
@@ -171,6 +198,7 @@
         <swiper-slide class="swiper_slide-3">Слідкуйте за новинами та очікуйте акції</swiper-slide>
         <swiper-slide class="swiper_slide-4"></swiper-slide>
         </swiper-container>
+
     </section>
     <!-- Map section info start-->
 
@@ -197,11 +225,11 @@
                     <svg role="img" 
                     viewBox="0 0 24 24" 
                     xmlns="http://www.w3.org/2000/svg">
-                    <title>HealthCare Factory</title>
+                    <title>Health Factory</title>
                     <path d="M15.442.718a2.58 2.58 0 0 0-2.579 2.579 2.58 2.58 0 0 0 1.368 2.275L12.809 8.27a3.505 3.505 0 0 0-1.077-.172 3.505 3.505 0 0 0-3.505 3.505 3.505 3.505 0 0 0 .085.745l-2.83 1.036a2.97 2.97 0 0 0-2.513-1.39A2.97 2.97 0 0 0 0 14.962a2.97 2.97 0 0 0 2.97 2.97 2.97 2.97 0 0 0 2.969-2.97 2.97 2.97 0 0 0-.072-.634l2.716-1.193a3.505 3.505 0 0 0 3.15 1.972 3.505 3.505 0 0 0 2.129-.724l2.276 2.167a4.305 4.305 0 0 0-.749 2.426 4.305 4.305 0 0 0 4.306 4.305A4.305 4.305 0 0 0 24 18.977a4.305 4.305 0 0 0-4.305-4.305 4.305 4.305 0 0 0-2.718.969l-2.424-1.964a3.505 3.505 0 0 0 .684-2.074 3.505 3.505 0 0 0-1.521-2.89l1.204-2.891a2.58 2.58 0 0 0 .522.054 2.58 2.58 0 0 0 2.58-2.58 2.58 2.58 0 0 0-2.58-2.578Z"/></svg>
-                    <span>HealthCare</span>
+                    <span>Health Factory</span>
                 </a>
-                <p class="footer__tagline">Awesome company tagline</p>
+                <!-- <p class="footer__tagline">Awesome company tagline</p> -->
             </div>
 
             <div class="footer__section-wrapper">
@@ -239,8 +267,8 @@
                 <div class="footer__section">
                     <h2 class="footer__category">Час роботи</h2>
                     <nav class="footer__list">
-                        <li class="footer__link">Пн.– пт. 9 ⁰⁰ – 21 ⁰⁰</li>
-                        <li class="footer__link">Сб. 9 ⁰⁰ – 18 ⁰⁰</li>
+                        <li class="footer__link">Пн.– пт. 9 ⁰⁰ – 20 ⁰⁰</li>
+                        <li class="footer__link">Сб. 9 ⁰⁰ – 16 ⁰⁰</li>
                     </nav>
                 </div>
             </div>
@@ -288,7 +316,7 @@
             </div>
         </div>
     </footer>
-    <!-- Footer section start-->
+
 
 
 
