@@ -38,14 +38,17 @@ window.onload = function () {
     breakpoints: {
       1920: {
         slidesPerView: 2,
-        spaceBetween: 20
+        slidesPerGroup: 2,
+        spaceBetween: 20,
       },
       1028: {
         slidesPerView: 2,
-        spaceBetween: 20
+        slidesPerGroup: 2,
+        spaceBetween: 20,
       },
       480: {
         slidesPerView: 1,
+        slidesPerGroup: 1,
         spaceBetween: 10
       }
     }
