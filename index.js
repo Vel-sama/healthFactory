@@ -54,5 +54,22 @@ window.onload = function () {
     }
   });
 };
-  
+
+let phone1 = document.getElementById("phone-1");
+let phone2 = document.getElementById("phone-2");
+let citySelect = document.getElementById("city");
+let adress = document.getElementById("adress-1");
+
+citySelect.addEventListener("change", function() {
+  let selectedCity = citySelect.value;
+    if (selectedCity === "Vishneve") {
+        phone1.innerText = "+38 (097) 2211022";
+        phone2.innerText = "  +38 (073) 2211022";
+        adress.innerText = "вул. Машинобудівників 17– А";
+    } else if (selectedCity === "Kiyv") {
+        phone1.innerText = "+38 (066) 2211002";
+        phone2.innerText = "+38 (068) 2211002";
+        adress.innerText = "Просп. Героїв Сталінграду 2Г"
+    }
+});
   
