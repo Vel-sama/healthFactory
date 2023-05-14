@@ -405,7 +405,7 @@ h1 {
 @media (max-width: 640px) {
     .dropdown__menu.open {
         width: 100%;
-        margin-top: 0.5rem;
+        margin-top: 7.6rem;
         margin-bottom: 0.5rem;
         right: 0;
     }
