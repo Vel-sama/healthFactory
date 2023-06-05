@@ -63,6 +63,8 @@ let citySelect = document.getElementById("city");
 let adress = document.getElementById("adress-1");
 let adress2 = document.getElementById("adress-2");
 
+let box1 = document.getElementById("irina_img");
+
 citySelect.addEventListener("change", function() {
   let selectedCity = citySelect.value;
     if (selectedCity === "Vishneve") {
@@ -72,13 +74,16 @@ citySelect.addEventListener("change", function() {
         phone4.innerText = "+38 (073) 2211022";
         adress.innerText = "вул. Машинобудівників 17– А";
         adress2.innerText = "вул. Машинобудівників 17– А";
+       
     } else if (selectedCity === "Kiyv") {
         phone1.innerText = "+38 (066) 2211002";
         phone2.innerText = "+38 (068) 2211002";
         phone3.innerText = "+38 (066) 2211002";
         phone4.innerText = "+38 (068) 2211002";
-        adress.innerText = "Просп. Героїв Сталінграду 2Г";
-        adress2.innerText = "Просп. Героїв Сталінграду 2Г"
+        adress.innerText = "р-н Оболонь проспект Героїв Сталінграду 2Г";
+        adress2.innerText = "р-н Оболонь проспект Героїв Сталінграду 2Г";
+        box1.setAttribute("src", "./src/images/Pavlo_compressed.jpg");
     }
 });
-  
+
+
